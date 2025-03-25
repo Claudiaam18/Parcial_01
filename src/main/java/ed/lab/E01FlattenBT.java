@@ -17,7 +17,12 @@ public class E01FlattenBT {
         root.left = null;
         root.right = leftSubtree;
 
-
+        //nodo
+        TreeNode<Integer> Nodoactual = root;
+        while (Nodoactual.right != null) {
+            Nodoactual = Nodoactual.right;
+        }
+        Nodoactual.right = rightSubtree;
     }
 
 }
