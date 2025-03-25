@@ -6,6 +6,7 @@ public class E01FlattenBT {
         if (root == null)
             return;
 
+        //recorrido preorder
         flatten(root.left);
         flatten(root.right);
 
@@ -17,7 +18,7 @@ public class E01FlattenBT {
         root.left = null;
         root.right = leftSubtree;
 
-        //nodo
+        //último nodo
         TreeNode<Integer> Nodoactual = root;
         while (Nodoactual.right != null) {
             Nodoactual = Nodoactual.right;
